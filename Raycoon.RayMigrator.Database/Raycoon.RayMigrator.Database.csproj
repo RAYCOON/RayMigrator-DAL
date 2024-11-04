@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Update="DataAccessLayers\**\*.sql">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="DataAccessLayers\**\*.sql" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Raycoon.RayMigrator.Database.Common\Raycoon.RayMigrator.Database.Common.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.1" />
+      <PackageReference Include="MySqlConnector" Version="2.3.7" />
+      <PackageReference Include="Npgsql" Version="8.0.3" />
+      <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="23.5.1" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <!-- Define the output directory -->
+        <OutputDir>$(OutputPath)</OutputDir>
+    </PropertyGroup>
+
+    <Target Name="CopySqlFiles" AfterTargets="Build">
+        <!-- Define the source directory relative to the project directory -->
+        <PropertyGroup>
+            <SourceDir>$(MSBuildProjectDirectory)\</SourceDir>
+        </PropertyGroup>
+
+        <!-- Define the files to be copied -->
+        <ItemGroup>
+            <SqlFiles Include="$(SourceDir)**\*.sql" />
+        </ItemGroup>
+
+        <!-- Copy all files from the source directory to the output directory, including subdirectories -->
+        <Copy SourceFiles="@(SqlFiles)" DestinationFolder="$(OutputDir)%(RecursiveDir)" />
+    </Target>
+    
+</Project>

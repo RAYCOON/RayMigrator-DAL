@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raycoon.RayMigrator.Database", "Raycoon.RayMigrator.Database\Raycoon.RayMigrator.Database.csproj", "{9E58D6D2-E549-46DF-8C25-760CE03D1653}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raycoon.RayMigrator.Database.Common", "Raycoon.RayMigrator.Database.Common\Raycoon.RayMigrator.Database.Common.csproj", "{DEFF59C6-285B-40A5-B842-E00C60493A59}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E58D6D2-E549-46DF-8C25-760CE03D1653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E58D6D2-E549-46DF-8C25-760CE03D1653}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E58D6D2-E549-46DF-8C25-760CE03D1653}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E58D6D2-E549-46DF-8C25-760CE03D1653}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEFF59C6-285B-40A5-B842-E00C60493A59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEFF59C6-285B-40A5-B842-E00C60493A59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEFF59C6-285B-40A5-B842-E00C60493A59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEFF59C6-285B-40A5-B842-E00C60493A59}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
