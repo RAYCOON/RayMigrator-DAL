@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>default</LangVersion>
+        <TargetFrameworks>net9.0;net8.0</TargetFrameworks>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Version>3.0.0</Version>
+        <Title>Raycoon RayMigrator Database Access Layer</Title>
+        <Copyright>RAYCOON.com GmbH</Copyright>
+        <PackageProjectUrl>https://raymigrator.com</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/RAYCOON/RayMigrator-DAL</RepositoryUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Update="DataAccessLayers\**\*.sql">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="DataAccessLayers\**\*.sql" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Raycoon.RayMigrator3.Database.Common\Raycoon.RayMigrator3.Database.Common.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.1" />
+      <PackageReference Include="MySqlConnector" Version="2.4.0" />
+      <PackageReference Include="Npgsql" Version="9.0.3" />
+      <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="23.7.0" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <!-- Define the output directory -->
+        <OutputDir>$(OutputPath)</OutputDir>
+    </PropertyGroup>
+
+    <Target Name="CopySqlFiles" AfterTargets="Build">
+        <!-- Define the source directory relative to the project directory -->
+        <PropertyGroup>
+            <SourceDir>$(MSBuildProjectDirectory)\</SourceDir>
+        </PropertyGroup>
+
+        <!-- Define the files to be copied -->
+        <ItemGroup>
+            <SqlFiles Include="$(SourceDir)**\*.sql" />
+        </ItemGroup>
+
+        <!-- Copy all files from the source directory to the output directory, including subdirectories -->
+        <Copy SourceFiles="@(SqlFiles)" DestinationFolder="$(OutputDir)%(RecursiveDir)" />
+    </Target>
+
+</Project>
