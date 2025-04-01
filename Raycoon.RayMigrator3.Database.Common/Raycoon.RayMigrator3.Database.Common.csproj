@@ -5,6 +5,18 @@
         <Nullable>enable</Nullable>
         <LangVersion>default</LangVersion>
         <TargetFrameworks>net9.0;net8.0</TargetFrameworks>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Version>3.0.0</Version>
+        <Title>Database Access Layer common library for RayMigrator</Title>
+        <Authors>Daniel Pavic</Authors>
+        <Description>Common library for Data Access Layer of RAYCOON RayMigrator</Description>
+        <Copyright>RAYCOON.com GmbH</Copyright>
+        <PackageProjectUrl>https://raymigrator.com</PackageProjectUrl>
+        <PackageLicenseUrl>https://mit-license.org</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/RAYCOON/RayMigrator-DAL</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>RAYCOON RayMigrator Database Migration Framework</PackageTags>
+        <PackageReleaseNotes>Initial public release</PackageReleaseNotes>
     </PropertyGroup>
 
 </Project>
