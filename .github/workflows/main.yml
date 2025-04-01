@@ -3,7 +3,7 @@ name: Build and Publish NuGet Package
 on:
   push:
     tags:
-      - 'v*.*.*'  # Trigger the workflow on version tags (e.g., v1.0.0)
+      - '*.*.*'  # Trigger the workflow on version tags (e.g., 1.0.0)
 
 jobs:
   build:
