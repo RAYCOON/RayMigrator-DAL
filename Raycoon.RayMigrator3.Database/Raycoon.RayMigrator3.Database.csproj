@@ -24,9 +24,10 @@
         <None Update="DataAccessLayers\**\*.sql">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
-        <None Update="README.md">
-          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="" />
     </ItemGroup>
 
     <ItemGroup>
