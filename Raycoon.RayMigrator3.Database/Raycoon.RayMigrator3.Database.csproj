@@ -8,15 +8,16 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Version>3.0.0</Version>
         <Title>Database Access Layer for RayMigrator by RAYCOON.com</Title>
-        <Copyright>RAYCOON.com GmbH</Copyright>
-        <PackageProjectUrl>https://raymigrator.com</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/RAYCOON/RayMigrator-DAL</RepositoryUrl>
         <Authors>Daniel Pavic</Authors>
         <Description>Data Access Layer for RAYCOON RayMigrator</Description>
-        <PackageLicenseUrl>https://mit-license.org</PackageLicenseUrl>
+        <Copyright>RAYCOON.com GmbH</Copyright>
+        <PackageProjectUrl>https://raymigrator.com</PackageProjectUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/RAYCOON/RayMigrator-DAL</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>RAYCOON RayMigrator Database Migration Framework</PackageTags>
         <PackageReleaseNotes>Initial public release</PackageReleaseNotes>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <ItemGroup>

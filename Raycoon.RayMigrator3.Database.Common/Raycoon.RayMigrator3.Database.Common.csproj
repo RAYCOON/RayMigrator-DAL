@@ -12,11 +12,12 @@
         <Description>Common library for Data Access Layer of RAYCOON RayMigrator</Description>
         <Copyright>RAYCOON.com GmbH</Copyright>
         <PackageProjectUrl>https://raymigrator.com</PackageProjectUrl>
-        <PackageLicenseUrl>https://mit-license.org</PackageLicenseUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <RepositoryUrl>https://github.com/RAYCOON/RayMigrator-DAL</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>RAYCOON RayMigrator Database Migration Framework</PackageTags>
         <PackageReleaseNotes>Initial public release</PackageReleaseNotes>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
 </Project>
