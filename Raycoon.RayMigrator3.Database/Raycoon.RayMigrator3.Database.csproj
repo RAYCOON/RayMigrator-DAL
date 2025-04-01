@@ -30,7 +30,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Raycoon.RayMigrator3.Database.Common\Raycoon.RayMigrator3.Database.Common.csproj" />
+      <ProjectReference Include="..\Raycoon.RayMigrator3.Database.Common\Raycoon.RayMigrator3.Database.Common.csproj" Pack="true" PackageReference="true" />
     </ItemGroup>
 
     <ItemGroup>
