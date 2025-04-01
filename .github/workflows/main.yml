@@ -2,9 +2,10 @@ name: Build and Publish NuGet Package
 
 on:
   push:
-    tags:
-      - '*.*.*'  # Trigger the workflow on version tags (e.g., 1.0.0)
-
+    branches:
+      - main    # Trigger on pushes to the main branch
+    # tags:
+    #  - '*.*.*' # Trigger on tags matching the pattern
 jobs:
   build:
     runs-on: ubuntu-latest
